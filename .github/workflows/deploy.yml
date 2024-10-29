@@ -15,8 +15,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
 
-      - name: Build binary
+      - name: Build binary(without output)
         run: deno compile -L debug main.ts
       
-      - name: Build binary
+      - name: Build binary(with output)
         run: deno compile -L debug --output=build/helloworld main.ts
