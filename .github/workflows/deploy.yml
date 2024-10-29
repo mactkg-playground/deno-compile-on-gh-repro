@@ -20,3 +20,6 @@ jobs:
       
       - name: Build binary(with output)
         run: deno compile -L debug --output=build/helloworld main.ts
+      
+      - name: Build binary(with target)
+        run: deno compile -L debug --target=aarch64-apple-darwin main.ts
