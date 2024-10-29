@@ -4,15 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  post_job:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: post job
-        run: echo "This is post job"
-
   build:
-    needs: post_job
     runs-on: ubuntu-latest
 
     steps:
