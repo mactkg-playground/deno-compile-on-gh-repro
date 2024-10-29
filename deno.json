@@ -1,7 +1,5 @@
 {
   "imports": {
-    "@std/log": "jsr:@std/log@^0.224.9",
-    "@types/node": "npm:@types/node@^22.8.2",
     "cowsay": "npm:cowsay@^1.6.0"
   }
 }
