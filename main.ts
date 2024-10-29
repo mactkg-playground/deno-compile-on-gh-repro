@@ -1,3 +1,1 @@
-import { logMe } from "./another.ts";
-
-console.log(logMe);
+console.log("Hi");
