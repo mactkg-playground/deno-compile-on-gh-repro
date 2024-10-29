@@ -1,2 +1,1 @@
-import { say } from "npm:cowsay";
-console.log(say({ text: "Hi" }));
+console.log("Hi");
