@@ -31,5 +31,8 @@ jobs:
       - name: Build binary(with output)
         run: deno compile -L debug --output=build/helloworld main.ts
       
-      - name: Build binary(with target)
+      - name: Build binary(with target + without output)
         run: deno compile -L debug --target=${{ matrix.target }} main.ts
+
+      - name: Build binary(with target + with output)
+        run: deno compile -L debug --target=${{ matrix.target }} --output=build/helloworld main.ts
