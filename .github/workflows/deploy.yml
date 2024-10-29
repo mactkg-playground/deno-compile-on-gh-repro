@@ -6,6 +6,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target:
+          [
+            x86_64-unknown-linux-gnu,
+            x86_64-pc-windows-msvc,
+            x86_64-apple-darwin,
+            aarch64-apple-darwin,
+          ]
+
     steps:
       - name: Set up Deno
         uses: denoland/setup-deno@v2
@@ -22,4 +32,4 @@ jobs:
         run: deno compile -L debug --output=build/helloworld main.ts
       
       - name: Build binary(with target)
-        run: deno compile -L debug --target=aarch64-apple-darwin main.ts
+        run: deno compile -L debug --target=${{ matrix.target }} main.ts
