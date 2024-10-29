@@ -1,5 +1,6 @@
 {
   "imports": {
-    "@std/log": "jsr:@std/log@^0.224.9"
+    "@std/log": "jsr:@std/log@^0.224.9",
+    "cowsay": "npm:cowsay@^1.6.0"
   }
 }
